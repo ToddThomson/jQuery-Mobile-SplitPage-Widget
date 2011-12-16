@@ -1,1 +1,10 @@
-Coming soon...
+Coming Soon...
+
+Dec 16th, Screen shot added
+Page extension "SplitPage' plugin created with:
+  - full markup completed based on <div data-role="page" data-splitpage="true"> and 2 defined pane widgets.
+  - very early click handling of master pane updating detail pane.
+  - basic fixed headers and footer css for master and detail panes
+
+Will try to get an early preview up next week..
+  
