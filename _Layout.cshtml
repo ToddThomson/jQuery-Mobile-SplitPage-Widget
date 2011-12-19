@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+	    <title>@ViewBag.Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+	    
+        <link rel="stylesheet" href="@Url.Content("~/Content/jquery.mobile-1.0.css")" />
+        <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" />
+	    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.6.4.js")"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(window).bind("resize", resizeWindow);
+                function resizeWindow(e) {
+                    $("body").css("min-height", $(window).height())
+                             .css("min-width", $(window).width());
+                }
+            });
+        </script>
+        <script type="text/javascript">
+        //<![CDATA[
+            $(document).bind("mobileinit", function () {
+                //$.mobile.touchOverflowEnabled = true;
+            });
+        //]]>
+        </script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.mobile-1.0.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.mobile.splitpage-1.0.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.mobile.pane-1.0.js")"></script>
+        <style type="text/css">
+            body 
+            {
+                margin:0;
+                -webkit-text-size-adjust: none;                
+            }
+            
+            body { font-family: 'Helvetica Neue', Arial, Sans-Serif; }
+            
+            header, footer { font-size:20px; text-align:center; color:#f3f3f3; font-weight:bold; text-shadow:0 -1px 0 rgba(0,0,0,0.5); line-height:45px;
+                height: 45px; position:fixed; left:0; z-index:2; @*-webkit-transform: translateZ(0); *@ }
+            
+            header { top: 0; }
+            footer { border-top: 1px solid #444; bottom:0; top:auto; }
+
+            .ui-pane-container.detail footer { left:320px; }
+            .ui-pane-container.detail header { left: 320px; }            
+            
+            .ui-content-section { position:absolute; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; padding: 10px; }
+            
+            .ui-scroll-y { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+            .ui-scroll-x { overflow-x: scroll; -webkit-overflow-scrolling: touch; }                    
+            
+            .ui-splitpage { position: absolute; top: 0; bottom: 0; background: black;}
+            .ui-splitpage-container { position: absolute; top: 0; bottom:0; width: 100%; overflow: hidden; }
+            .ui-splitpage-pane { position: absolute; top: 0; bottom:0; left:0; right:0; overflow: hidden; }
+             
+            .ui-pane-container.detail { position: absolute; top: 45px; bottom:45px; left: 319px; right: 0px; background: #e1e9f9;}
+            .ui-pane-container.master { position: absolute; top: 45px; bottom:45px; overflow: hidden; width: 320px;  background: gray; border-right: 1px solid black; }
+        </style>
+    </head> 
+<body>
+    @*
+        Markup for SplitPage page extension.
+        - Must contain 2 panes: 
+            First defaults to "Master" pane.
+            2nd defaults to "Detail" pane.
+    *@
+
+    <div data-role="page" data-splitpage="true">
+        <div data-role="pane" data-theme="b">
+            @RenderSection( "NavigationPane" )
+        </div>
+        <div data-role="pane">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@section NavigationPane {
+<header>
+    Navigation
+</header>
+<div class="ui-content-section ui-scroll-y">
+     <ul data-role="listview" data-inset="true">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        @for (var i = 0; i < 100; i++) {
+            <li>Some action @i.ToString()</li>
+        }
+    </ul>
+</div>
+<footer>
+    fixed nav footer
+</footer>
+}
+<header>
+    Welcome!
+</header>
+<div class="ui-content-section ui-scroll-y">
+    <h2>@ViewBag.Message</h2>
+    <p>
+        To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+    </p>
+    @for ( var i = 0; i < 100; i++ )
+    {
+        <p> this another @i.ToString() paragraph of text this is quite long asdlfj jfdska; jfdkslriur ajfjd jejj jfjfjfj
+        fjjfjfjfkdksla;lkjfjfjdksa;kjfjfjdk
+        kfjfjf jfjfj fjfj fjfj fjfjuiriri aasdfj qwer qwer asdf erqui 
+        asdfje ruiop</p>
+    }
+</div>
+<footer>
+    fixed detail footer
+</footer>
