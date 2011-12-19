@@ -6,5 +6,10 @@ Page extension "SplitPage' plugin created with:
   - very early click handling of master pane updating detail pane.
   - basic fixed headers and footer css for master and detail panes
 
-Will try to get an early preview up next week..
+Dec 19th, Fixed Headers and Scrollable regions CSS is now good.
+  - Listview with native scroll only updates after scroll has completed???
+  - good independent scrolling in both panes!
+  - scrollbars in Mac Safari and iPad simulator line up perfectly with scrollable region.
+
+Will try to get an early preview up soon..
   
