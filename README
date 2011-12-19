@@ -9,8 +9,10 @@ Page extension "SplitPage' plugin created with:
 Dec 19th, Fixed Headers and Scrollable regions CSS is now good.
   - Listview with native scroll only updates after scroll has completed???
       - Determined to be caused by ui-li { ..position:relative; .. }
+      - Any ui-li with position:relative; will not be visible when scrolled into the viewing window until scrolling completes
   - good independent scrolling in both panes!
   - scrollbars in Mac Safari and iPad simulator line up perfectly with scrollable region.
+  - Added index.cshtml and _layout.cshtml to show CSS rules
 
 Will try to get an early preview up soon..
   
