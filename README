@@ -1,9 +1,15 @@
 Dec 24,
 
-- CSS testing completed: fix for clipping of offscreen elements with position:relative when using overflow:scroll
+- CSS testing completed: 
+
+-Fix for clipping of offscreen elements with position:relative when using overflow:scroll
   is to use add -webkit-transform: translateZ(0) to .ui-li
+- Fix for scrolling content @ top and bottom showing browser chrome
+- Fix for header, footer showing chrome when scrolling
+
+TODO cleanup from all testing and hacking!
 
 demo @ http://team.integra-international.net
 
-Will try to get an early preview up soon..
+Will try to get an early preview of splitpage extension soon..
   
